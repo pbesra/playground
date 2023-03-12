@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
-import { json } from "stream/consumers";
 
-type nameType = {
+export type nameType = {
   name: string;
   isChecked: boolean;
 };
@@ -44,7 +43,7 @@ export const Child = ({ setHasChanged }: childProps) => {
   }, [names]);
 
   return (
-    <div>
+    <div role="child">
       {names.map((item) => (
         <div
           key={item.name}

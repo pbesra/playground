@@ -17,7 +17,9 @@ jest.mock("react-router-dom", () => ({
   useNavigate: () => mockedNavigate, // Return an empty jest function to test whether it was called or not...I'm not depending on the results so no need to put in a return value
 }));
 
-const renderComponent = () => {
+
+
+export const renderComponent = () => {
   return <MemoryRouter initialEntries={["/"]}>{<Parent />}</MemoryRouter>;
 };
 
